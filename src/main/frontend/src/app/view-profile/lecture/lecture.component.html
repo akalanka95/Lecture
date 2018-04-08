@@ -1,0 +1,92 @@
+<div class="tab-pane" id="updates">
+
+  <div class="card-content table-responsive">
+    <table class="table">
+      <thead class="text-danger">
+      <tr>
+        <th>Image</th>
+        <th>Full Name</th>
+        <th>Department</th>
+        <th>Address</th>
+        <th>Contact</th>
+        <th>Email</th>
+        <th>Active</th>
+        <th>View/Edit</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let lecture of lectures">
+        <td><img class="img" src="../assets/img/faces/marc.jpg" /></td>
+        <td>{{lecture.fullName}}</td>
+        <td>{{lecture.department.departmentName}}</td>
+        <td class="text-danger">{{lecture.address}}</td>
+        <td class="text-danger">{{lecture.contact}}</td>
+        <td class="text-danger">{{lecture.email}}</td>
+        <td class="text-danger">{{lecture.active}}</td>
+        <td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalLong"><i class="fa fa-eye"></i></button>
+          &nbsp;
+          <a [routerLink]="['edit',1]" class="btn btn-success btn-sm"><i class="fa fa-pencil-square "></i></a></td>
+
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="col-md-4">
+                  <div class="card card-profile">
+                    <div class="card-avatar">
+                      <a href="#pablo">
+                        <img class="img" src="../assets/img/faces/marc.jpg" />
+                      </a>
+                    </div>
+
+                    <div class="content">
+                      <h6 class="category text-gray">{{lecture.fullName}}</h6>
+                      <h4 class="card-title">Alec Thompson</h4>
+                      <p class="card-content">
+                        Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                      </p>
+                      <a href="#pablo" class="btn btn-danger btn-round">Follow</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <p>This is going to be the contenteCras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
+                    Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+                    Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+
+                    Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
+                    Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+                    Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+
+                    Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
+                    Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+
+
+</div>

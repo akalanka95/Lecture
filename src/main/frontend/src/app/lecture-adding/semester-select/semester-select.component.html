@@ -1,0 +1,20 @@
+<div class="card-content table-responsive col-md-3">
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link active btn btn-default" [routerLink]="['semester','1']">Semester 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link btn btn-default" [routerLink]="['semester','2']">Semester 2</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link btn btn-default" [routerLink]="['semester','3']">Semester 3</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link btn btn-default" [routerLink]="['semester','4']">Semester 4</a>
+    </li>
+  </ul>
+  <a [routerLink]="['semester','1']">Semester 1</a>
+</div>
+<div class="col-md-9">
+  <router-outlet></router-outlet>
+</div>

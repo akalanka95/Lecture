@@ -1,0 +1,156 @@
+<div class="tab-pane active" id="home">
+  <div class="card-content">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <!--<div class="card-header" data-background-color="red">
+            <h4 class="title">Edit Profile</h4>
+            <p class="category">Complete your profile</p>
+          </div>-->
+          <div class="card-content">
+            <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="form-group form-black label-floating is-empty">
+                    <label class="control-label"></label>
+                    <input type="text" class="form-control" disabled  name="university" placeholder="Sabaragamuwa University">
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group form-black label-floating is-empty">
+                    <label class="control-label">Full Name</label>
+                    <input type="text" class="form-control" name="fullName" [(ngModel)]="lectureName" required>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group form-black label-floating is-empty">
+                    <label class="control-label">Email address</label>
+                    <input type="email" class="form-control" name="email"
+                           [(ngModel)]="lectureEmail" required email
+                    #email="ngModel">
+                     </div>
+                  <span class="help-block" *ngIf="!email.valid && email.touched">Please enter valid email</span>
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group form-black label-floating is-empty">
+                     <select  id="inputState" class="form-control"  name="department" ngModel required>
+
+                      <option *ngFor="let departments of departmentList" (click)="selectDepartment(departments)">{{departments.departmentName}}</option>
+
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group form-black label-floating is-empty">
+                    <label class="control-label">Address</label>
+                    <input type="text" class="form-control" name="address" [(ngModel)]="lectureAddres" required >
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group form-black label-floating is-empty">
+                    <label class="control-label">Contact</label>
+                    <input type="text" class="form-control" name="contact" [(ngModel)]="lectureContact" required >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group form-black label-floating is-empty">
+                    <label class="control-label">Role</label>
+                    <input type="text" class="form-control" name="role" [(ngModel)]="lectureRole" required >
+                  </div>
+                </div>
+              </div>
+
+              <!--<div class="row">
+
+                <div class="col-md-8">
+                  <div class="form-group form-black label-floating is-empty">
+                    <label class="control-label">Country</label>
+                    <input type="text" class="form-control" >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group form-black label-floating is-empty">
+                    <label class="control-label">Postal Code</label>
+                    <input type="text" class="form-control" >
+                  </div>
+                </div>
+              </div>-->
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>About Lecture</label>
+                    <div class="form-group form-black label-floating is-empty">
+                      <label class="control-label">More about him..</label>
+                      <textarea class="form-control" rows="5" [(ngModel)]="lectureDetails" name="details"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" [disabled]="!f.valid" class="btn btn-danger pull-right" data-toggle="modal" data-target="#exampleModal">Update Profile</button>
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" style="width: 400px">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary" >Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-md-4">
+        <div class="card card-profile">
+          <div class="card-avatar">
+            <a href="#pablo">
+              <img class="img" src="../assets/img/faces/marc.jpg" />
+            </a>
+
+          </div>
+
+          <div class="content">
+            <!--<h1>Department Name</h1>-->
+            <h4 class="card-title">{{lectureName}}</h4>
+            <h6 class="category text-gray" > {{lectureRole}}</h6>
+            <h6 class="category text-gray" > {{lectureDepartment}}</h6>
+            <h6 class="category text-gray" > {{lectureEmail}}</h6>
+            <h6 class="category text-gray" style="padding-right: 10px">{{lectureAddres}}</h6>
+            <h6 class="category text-gray" > {{lectureContact}}</h6>
+
+            <p class="card-content">
+              {{lectureDetails}}
+               </p>
+            <!--      <a href="#pablo" class="btn btn-danger btn-round">Follow</a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

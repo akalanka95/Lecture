@@ -1,0 +1,25 @@
+<div class="tab-pane active" id="home">
+  <div class="card-content table-responsive">
+    <table class="table">
+      <thead class="text-danger">
+      <tr>
+        <th>Name</th>
+        <th>Country</th>
+        <th>City</th>
+        <th>Salary</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let department of departments">
+        <td>{{department.id}}</td>
+        <td>{{department.departmentName}}</td>
+        <td>{{department.description}}</td>
+        <td class="text-danger">{{department.active}}</td>
+      </tr>
+      </tbody>
+    </table>
+
+
+
+  </div>
+</div>

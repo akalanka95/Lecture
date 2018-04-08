@@ -1,0 +1,141 @@
+<div class="main-content">
+  <div class="container-fluid">
+ <!--   <p> haiiiiiii</p>
+<ul >
+  <li *ngFor="let department of departments" >
+      <p> haiiiiiii</p>
+      <p>{{department.departmentName}}</p>
+      <button class="btn btn-danger btn-sm  float-right"
+              >Delete</button>
+      <span class="badge  float-right" style="margin-right: 40px">{{department.description}}</span>
+
+  </li>
+</ul>-->
+
+       <!-- <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header" data-background-color="red">
+                <h4 class="title">Simple Table</h4>
+                <p class="category">Here is a subtitle for this table</p>
+              </div>
+              <div class="card-content table-responsive">
+                <table class="table">
+                  <thead class="text-danger">
+                  <tr>
+                    <th>Name</th>
+                    <th>Country</th>
+                    <th>City</th>
+                    <th>Salary</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let department of departments">
+                    <td>{{department.id}}</td>
+                    <td>{{department.departmentName}}</td>
+                    <td>{{department.description}}</td>
+                    <td class="text-danger">$78,615</td>
+                  </tr>
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+          </div>
+
+
+              </div>-->
+
+
+    <div class="card card-nav-tabs card-plain">
+      <div class="card-header card-header-info" data-background-color="red">
+        <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+        <div class="nav-tabs-navigation">
+          <div class="nav-tabs-wrapper">
+            <ul class="nav nav-tabs" data-tabs="tabs">
+              <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link "  data-toggle="tab" routerLink="department"  (click)="activeTab('Add Department','department')"><i class="material-icons">dashboard</i>Departments</a>
+              </li>
+              <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link"  data-toggle="tab" routerLink="lecture"  (click)="activeTab('Add Lecture','lecture')"><i class="material-icons">face</i>Lectures</a>
+              </li>
+              <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link"  data-toggle="tab" routerLink="departmentRef"  (click)="activeTab('Add DepartmentRef','departmentRef')"><i class="material-icons">face</i>DepartmentRefs</a>
+              </li>
+              <a class="btn btn-primary btn-round" style="float: right" routerLink="add/{{activeId}}" data-toggle="tab">
+                <i class="material-icons">dashboard</i> {{active}}
+              </a>
+            </ul>
+          </div>
+
+        </div>
+      </div><div class="card-body ">
+      <div class="tab-content ">
+        <router-outlet></router-outlet>
+        <!--<div class="tab-pane active" id="home">
+          <div class="card-content table-responsive">
+            <table class="table">
+              <thead class="text-danger">
+              <tr>
+                <th>Name</th>
+                <th>Country</th>
+                <th>City</th>
+                <th>Salary</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let department of departments">
+                <td>{{department.id}}</td>
+                <td>{{department.departmentName}}</td>
+                <td>{{department.description}}</td>
+                <td class="text-danger">{{department.active}}</td>
+              </tr>
+              </tbody>
+            </table>
+
+          </div>
+           </div>-->
+        <!--<div class="tab-pane" id="updates">
+
+          <div class="card-content table-responsive">
+            <table class="table">
+              <thead class="text-danger">
+              <tr>
+                <th>Image</th>
+                <th>Full Name</th>
+                <th>Department</th>
+                <th>Address</th>
+                <th>Contact</th>
+                <th>Email</th>
+                <th>Active</th>
+                <th>View/Edit</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let lecture of lectures">
+                <td><img class="img" src="../assets/img/faces/marc.jpg" /></td>
+                <td>{{lecture.fullName}}</td>
+                <td>{{lecture.department.departmentName}}</td>
+                <td class="text-danger">{{lecture.address}}</td>
+                <td class="text-danger">{{lecture.contact}}</td>
+                <td class="text-danger">{{lecture.email}}</td>
+                <td class="text-danger">{{lecture.active}}</td>
+                <td><a class="btn btn-primary btn-sm" href="#"><i class="fa fa-eye"></i></a>
+                   &nbsp;
+                  <a href="#" class="btn btn-success btn-sm"><i class="fa fa-pencil-square "></i></a></td>
+              </tr>
+              </tbody>
+            </table>
+
+          </div>
+
+
+        </div>-->
+        <!--<div class="tab-pane" id="history">
+          <p> I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.</p>
+        </div>-->
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
