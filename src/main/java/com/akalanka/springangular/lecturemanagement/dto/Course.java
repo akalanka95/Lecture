@@ -11,6 +11,7 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name="course_details")
 public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY	)

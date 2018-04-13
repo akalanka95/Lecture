@@ -8,11 +8,12 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
+import java.util.UUID;
 
 @Entity
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "lecture_detail")
 public class Lecture {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY	)
@@ -34,6 +35,11 @@ public class Lecture {
     private boolean active;
     @Transient
     private MultipartFile file;
+
+    public Lecture() {
+        this.imageUrl = "LCR" + UUID.randomUUID().toString().substring(26).toUpperCase();
+    }
+
 
 
 }

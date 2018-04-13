@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Lecture} from "../../lecture.model";
 import {LectureService} from "../../service/lecture.service";
 import {ActivatedRoute, Router} from "@angular/router";
@@ -8,7 +8,9 @@ import {ActivatedRoute, Router} from "@angular/router";
   templateUrl: './lecture.component.html',
   styleUrls: ['./lecture.component.css']
 })
-export class LectureComponent implements OnInit {
+export class LectureComponent implements OnInit,OnDestroy {
+
+    passLecture: Lecture;
   lectures: Lecture [] = [] ;
 
   constructor(private lectureService: LectureService,
@@ -26,10 +28,13 @@ export class LectureComponent implements OnInit {
   }
 
   onEditLecture(lecture: Lecture){
-      /*return this.router.navigate(['edit','getting'],{relativeTo: this.route});
-      *//*this.lectureService.newEmitter.emit(lecture);*/
-
-
+      this.passLecture =lecture;
+      return this.router.navigate(['edit'],{relativeTo: this.route});
+      /*this.lectureService.newEmitter.emit(lecture);*/
   }
+
+    ngOnDestroy(): void {
+      this.lectureService.passingLecture = this.passLecture;
+    }
 
 }

@@ -227,6 +227,5 @@ public class LectureManagementApplication implements CommandLineRunner {
 
 		timeTableService.save(timeTable);
 
-
 	}
 }

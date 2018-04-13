@@ -34,4 +34,9 @@ public class LectureServiceImp implements LectureService {
         return  lecture.get();
 
     }
+
+    @Override
+    public Lecture updateLecture(Lecture lecture) {
+        return this.lectureDao.save(lecture);
+    }
 }

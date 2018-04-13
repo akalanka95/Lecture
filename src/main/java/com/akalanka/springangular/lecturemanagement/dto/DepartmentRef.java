@@ -13,6 +13,7 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "departmentRef_detail")
 public class DepartmentRef {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY	)

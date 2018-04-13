@@ -32,7 +32,7 @@ const routes: Routes =[
     { path: 'view-profile',   component: ViewProfileComponent , children : [
             {path : 'department', component : DepartmentComponent},
             {path : 'lecture', component : LectureComponent},
-            {path : 'lecture/edit/:lecture', component : AddLectureComponent},
+            {path : 'lecture/edit', component : AddLectureComponent},
             {path : 'departmentRef', component : LectureComponent},
             {path : 'add/department', component : AddDepartmentComponent},
             {path : 'add/lecture', component : AddLectureComponent},

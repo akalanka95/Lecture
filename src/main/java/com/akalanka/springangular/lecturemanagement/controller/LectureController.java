@@ -28,5 +28,9 @@ public class LectureController {
         System.out.println(this.lectureService.findById(1).getDepartment().getDepartmentName());
         return this.lectureService.findById(id);
     }
+    @PutMapping(value = "update")
+    public Lecture updateLecture(@RequestBody Lecture lecture){
+        return this.lectureService.updateLecture(lecture);
+    }
 
 }

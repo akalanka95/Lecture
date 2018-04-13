@@ -37,6 +37,7 @@ import { SemesterSelectComponent } from './lecture-adding/semester-select/semest
 import { AddFormComponent } from './lecture-adding/semester-select/add-form/add-form.component';
 import { AddLectureComponent } from './view-profile/department/add-lecture/add-lecture.component';
 import {Lecture} from "./lecture.model";
+import {ImageUploadModule} from "angular2-image-upload";
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import {Lecture} from "./lecture.model";
     HttpModule,
     ComponentsModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+      ImageUploadModule.forRoot(),
   ],
   providers: [DepartmentService,LectureService,TimeTableService],
   bootstrap: [AppComponent]

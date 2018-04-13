@@ -10,4 +10,5 @@ public interface LectureService {
     Lecture save(Lecture lecture);
     void delete(Integer id);
     Lecture findById(Integer id);
+    Lecture updateLecture(Lecture lecture);
 }

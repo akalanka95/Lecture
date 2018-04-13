@@ -7,6 +7,7 @@ import {Lecture} from "../lecture.model";
 export class LectureService{
 
     newEmitter = new EventEmitter<Lecture>();
+    passingLecture: Lecture;
 
     constructor(private http: Http){
 
@@ -19,5 +20,11 @@ export class LectureService{
         return this.http.post('/api/lectures/save',newLecture);
 
     }
+
+    updateLecture(updateLecture: Lecture){
+        return this.http.put('/api/lectures/update',updateLecture);
+
+    }
+
 
 }
